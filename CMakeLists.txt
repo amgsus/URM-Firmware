@@ -46,11 +46,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(USB_DEVICE/Target Drivers/STM32F0xx_HAL_Driver/Inc Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc Drivers/CMSIS/Include Core/Inc USB_DEVICE/App Drivers/STM32F0xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F0xx/Include Middlewares/ST/STM32_USB_Device_Library/Core/Inc)
+include_directories(USB_DEVICE/Target Drivers/STM32F0xx_HAL_Driver/Inc Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc Drivers/CMSIS/Include Core/Inc USB_DEVICE/App Drivers/STM32F0xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F0xx/Include Middlewares/ST/STM32_USB_Device_Library/Core/Inc Application/Include)
 
 add_definitions(-DUSE_HAL_DRIVER -DSTM32F042x6 -DDEBUG)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*" "USB_DEVICE/*.*")
+file(GLOB_RECURSE SOURCES "Application/*.*" "Core/*.*" "Drivers/*.*" "Middlewares/*.*" "USB_DEVICE/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F042F6PX_FLASH.ld)
 
